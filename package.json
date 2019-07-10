@@ -7,7 +7,6 @@
     "node": "8.16.0"
   },
   "dependencies": {
-    "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "magic.css": "^1.4.1",
     "react": "^16.8.6",
