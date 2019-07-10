@@ -1,0 +1,13 @@
+.row-alignment {
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-width {
+  width: 80px;
+}
+
+.magictime {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
