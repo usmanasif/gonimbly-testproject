@@ -6,16 +6,23 @@ const IMAGE_HOST = "https://robohash.org/";
 class UserForm extends Component {
   state = {
     current_image_url: "",
+    user_input: "",
     showImage: false
   };
 
   handleSearch = event => {
-    this.setState({ current_image_url: event.target.value, showImage: false });
+    this.setState({ user_input: event.target.value, showImage: false });
+  };
+
+  handleEnter = event => {
+    if (event.key === "Enter") {
+      this.handleSubmit();
+    }
   };
 
   handleSubmit = _ => {
     this.setState({
-      current_image_url: IMAGE_HOST.concat(this.state.current_image_url),
+      current_image_url: IMAGE_HOST.concat(this.state.user_input),
       showImage: true
     });
   };
@@ -35,6 +42,7 @@ class UserForm extends Component {
             className="form-control col-md-3 col-10"
             placeholder="Enter anything..."
             onChange={this.handleSearch}
+            onKeyPress={this.handleEnter}
           />
           <button
             className="btn btn-primary btn-sm btn-width col-md-1 col-10"
